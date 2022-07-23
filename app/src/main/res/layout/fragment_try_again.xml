@@ -1,0 +1,76 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+android:padding="10dp"
+tools:context=".fragments.TryAgainFragment">
+
+<Button
+    android:id="@+id/try_again"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:background="@drawable/rounded_button"
+    android:text="@string/try_again"
+    android:textColor="#ffffffff"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="@+id/winner_score"
+    app:layout_constraintStart_toStartOf="@+id/winner_score"
+    app:layout_constraintTop_toBottomOf="@+id/winner_score"
+    tools:ignore="TextContrastCheck" />
+
+<ImageView
+    android:id="@+id/imageView3"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_marginBottom="16dp"
+    android:contentDescription="@string/todo"
+    android:src="@drawable/gameover_panda"
+    app:layout_constraintBottom_toTopOf="@+id/total_score"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/winner_score"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:background="@drawable/rounded_button"
+    android:fontFamily="sans-serif-medium"
+    android:padding="10dp"
+    android:textColor="@color/black"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/total_score" />
+
+<TextView
+    android:id="@+id/total_score"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-medium"
+    android:text="@string/total_score"
+    android:textColor="@color/black"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/textView7"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:background="@drawable/rounded_red_button"
+    android:padding="5dp"
+    android:text="@string/game_over"
+    android:textColor="@color/red"
+    android:textSize="34sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/try_again" />
+</androidx.constraintlayout.widget.ConstraintLayout>
